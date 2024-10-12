@@ -1,4 +1,4 @@
-#wwwwwwwwwwwwwwwwFFFFFFFFAAAAAA
+
 ---
 
 # KhamatnurovDenisIs32k1
