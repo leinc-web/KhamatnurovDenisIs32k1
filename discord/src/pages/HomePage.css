@@ -1,0 +1,29 @@
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5865f2;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.homepage-content {
+    max-width: 600px;
+}
+
+.homepage-button {
+    background-color: #7289da;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.homepage-button:hover {
+    background-color: #5b6eae;
+}
