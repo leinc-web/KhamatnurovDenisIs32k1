@@ -1,4 +1,6 @@
+
 // src/pages/HomePage.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
@@ -6,12 +8,12 @@ import '../styles.css';
 const HomePage = () => {
   return (
     <div className="container">
-      <h1>Welcome to the Discord-themed App</h1>
+      <h1>Добро пожаловать на домашнюю страницу!</h1>
       <nav>
         <ul>
-          <li><Link to="/todo">Todo List</Link></li>
-          <li><Link to="/create-server">Create Server</Link></li>
-          <li><Link to="/create-channel">Create Channel</Link></li>
+          <li><Link to="/create-channel">Создать канал</Link></li>
+          <li><Link to="/create-server">Создать сервер</Link></li>
+          <li><Link to="/todo">Список дел</Link></li>
         </ul>
       </nav>
     </div>
@@ -19,3 +21,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

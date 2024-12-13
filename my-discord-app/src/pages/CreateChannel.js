@@ -1,5 +1,7 @@
 // src/pages/CreateChannel.js
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 
 const CreateChannel = ({ onCreateChannel }) => {
@@ -13,6 +15,11 @@ const CreateChannel = ({ onCreateChannel }) => {
   return (
     <div className="container">
       <h1>Create Channel</h1>
+      <nav>
+        <ul>
+          <li><Link to="/home">Домашняя</Link></li>
+        </ul>
+      </nav>
       <div>
         <input
           type="text"
@@ -27,3 +34,5 @@ const CreateChannel = ({ onCreateChannel }) => {
 };
 
 export default CreateChannel;
+
+
