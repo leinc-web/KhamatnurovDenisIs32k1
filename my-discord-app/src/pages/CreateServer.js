@@ -1,5 +1,7 @@
 // src/pages/CreateServer.js
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 
 const CreateServer = ({ onCreateServer }) => {
@@ -13,6 +15,11 @@ const CreateServer = ({ onCreateServer }) => {
   return (
     <div className="container">
       <h1>Create Server</h1>
+      <nav>
+        <ul>
+          <li><Link to="/home">Домашняя</Link></li>
+        </ul>
+      </nav>
       <div>
         <input
           type="text"
@@ -27,3 +34,5 @@ const CreateServer = ({ onCreateServer }) => {
 };
 
 export default CreateServer;
+
+

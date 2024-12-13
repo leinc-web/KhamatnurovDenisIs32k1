@@ -1,6 +1,8 @@
 
 // src/pages/TodoPage.js
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 
 const TodoPage = () => {
@@ -15,6 +17,11 @@ const TodoPage = () => {
   return (
     <div className="container">
       <h1>Todo List</h1>
+      <nav>
+        <ul>
+          <li><Link to="/home">Домашняя</Link></li>
+        </ul>
+      </nav>
       <div>
         <input
           type="text"
@@ -33,4 +40,6 @@ const TodoPage = () => {
 };
 
 export default TodoPage;
+
+
 
