@@ -1,0 +1,25 @@
+
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"   # Пробрасываем порт 5000
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: Plk02!saq
+      DB_NAME: mydatabase
+      JWT_SECRET: 6352927ab4a11c6e37fea4ac3778ba1ec9138012d577387af334ef1d191acd13cce3a5b407486a3419aeda43ea0df67101164077d4f7c41a95cf85e2dc6571aef0bbd24b2e78ff6e10e47029031de9d8ebf634e74890c1470a7f9ac6fd911bb462701609333234aa82b1f06c8d652b8b4699e3a6eec38f268b305713242f5d64b12a21338cde65da663ec5abcf1a3e1f6c4c76db7ae279814cc17f3fb2a9610bf15aa6f5cfcc6e6c26fa08896b1fd463ed4b02684a0f445ff82b23036593fa217dae06f90bb3c5584ec2e2e197f9b3fe1d253bdbb2ac370360a6ac4b02d38585fb06c2aed976a680ed38e4fde4518d5c75e3653981450e9fc0c576cdaf14613a
+    depends_on:
+      - db
+  
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Plk02!saq
+      MYSQL_DATABASE: mydatabase
+    ports:
+      - "3306:3306"
