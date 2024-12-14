@@ -1,5 +1,6 @@
 // src/pages/CreateServer.js
 
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
@@ -34,5 +35,6 @@ const CreateServer = ({ onCreateServer }) => {
 };
 
 export default CreateServer;
+
 
 

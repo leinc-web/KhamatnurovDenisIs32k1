@@ -1,14 +1,17 @@
 // src/pages/CreateChannel.js
 
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css';
 
 const CreateChannel = ({ onCreateChannel }) => {
   const [channelName, setChannelName] = useState('');
+  const [channels, setChannels] = useState([]);
 
   const handleCreateChannel = () => {
     onCreateChannel(channelName);
+    setChannels([...channels, channelName]);
     setChannelName('');
   };
 
@@ -29,6 +32,11 @@ const CreateChannel = ({ onCreateChannel }) => {
         />
         <button onClick={handleCreateChannel}>Create</button>
       </div>
+      <ul>
+        {channels.map((channel, index) => (
+          <li key={index}>{channel}</li>
+        ))}
+      </ul>
     </div>
   );
 };
