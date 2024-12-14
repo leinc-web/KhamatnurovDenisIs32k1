@@ -1,75 +1,141 @@
 
-/* src/styles.css */
-
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #36393f;
-    color: #dcddde;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #36393f;
+  color: #dcddde;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #b9bbbe;
+  margin-bottom: 30px;
+}
+
+nav {
+  background-color: #2f3136;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  color: #7289da;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #2f3136;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  width: calc(100% - 22px);
+}
+
+
+.button-group {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Добавьте отступ между кнопками */
+}
+
+button:last-child {
+  margin-right: 0; /* Уберите отступ у последней кнопки */
+}
+
+button:hover {
+  background-color: #5a6fa5;
+}
+
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-color: #2f3136;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
-  
-  h1 {
-    font-size: 2rem;
-    color: #ffffff;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  nav {
-    background-color: #2f3136;
-    padding: 10px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 10px 0;
-  }
-  
-  nav a {
-    color: #7289da;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .container {
-    padding: 20px;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7289da;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #5a6fa5;
-  }
-  
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  li {
-    background-color: #2f3136;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+}

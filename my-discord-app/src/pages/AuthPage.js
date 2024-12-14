@@ -1,9 +1,12 @@
 
+
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 
 const AuthPage = () => {
+  const [isRegistering, setIsRegistering] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -51,13 +54,15 @@ const AuthPage = () => {
 
   return (
     <div className="container">
-      <h1>Регистрация / Вход</h1>
-      <input
-        type="text"
-        placeholder="Имя"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+      <h1>{isRegistering ? 'Регистрация' : 'Вход'}</h1>
+      {isRegistering && (
+        <input
+          type="text"
+          placeholder="Имя"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      )}
       <input
         type="email"
         placeholder="Email"
@@ -70,12 +75,20 @@ const AuthPage = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <div>
-        <button onClick={handleRegister}>Зарегистрироваться</button>
-        <button onClick={handleLogin}>Войти</button>
+      <div className="button-group">
+        {isRegistering ? (
+          <button onClick={handleRegister}>Зарегистрироваться</button>
+        ) : (
+          <button onClick={handleLogin}>Войти</button>
+        )}
+        <button onClick={() => setIsRegistering(!isRegistering)}>
+          {isRegistering ? 'Перейти к входу' : 'Перейти к регистрации'}
+        </button>
       </div>
     </div>
   );
 };
 
 export default AuthPage;
+
+

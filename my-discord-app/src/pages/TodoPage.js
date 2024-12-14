@@ -19,7 +19,7 @@ const TodoPage = () => {
       <h1>Todo List</h1>
       <nav>
         <ul>
-          <li><Link to="/home">Домашняя</Link></li>
+          <li><Link to="/home">В начало</Link></li>
         </ul>
       </nav>
       <div>
